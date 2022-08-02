@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=style.css rel="stylesheet" type="text/css">
+    <title>Random generator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @media screen and (max-width:500px){
+            #word{
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:400px;
+                height:100px;
+                border:5px solid #000;
+                transform:translate(-50%,-50%);
+                text-align:center;
+                font-size:60px;
+                font-weight: bold;
+            }
+            #menu2{
+                display:flex;
+                flex-direction:column;
+            }
+        }
+        @media screen and (max-width:700px){
+            #word{
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:400px;
+                height:100px;
+                border:5px solid #000;
+                transform:translate(-50%,-50%);
+                text-align:center;
+                font-size:60px;
+                font-weight: bold;
+            }
+            #menu2{
+                display:flex;
+                flex-direction:column;
+            }
+        }
+        #container{
+            display:none
+        }
+        #svg{
+            position:absolute;
+            top:50%;
+            left:50%;
+            height:700px;
+            width:900px;
+            transform:translate(-50%,-50%);
+            stroke:#000;
+            stroke-width:3px;
+            fill:transparent;
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3500;
+            animation:draw 5s linear infinite;
+        }
+        @keyframes draw{
+            to{stroke-dashoffset: 0;}
+        }
+    </style>
+</head>
+<body onload="carreg()">
+    <div id="desenho">
+        <svg id="svg">
+            <polyline points="300,500 300,100 550,100 550,290 350,290 550,500">
+        </svg>
+    </div>
+    <div id="container">
+            <div id="first">
+                <div id="menu">
+                    <a id=pais href="pais.html"><div id="pais">País</div></a>
+                    <a id="estado" href="state.html"><div id="estado">Estado</div></a>
+                    <a id="letra" href="let.html"><div id="letra">Letra</div></a>
+                    <a id="num" href="num.html"><div id="num">Numero</div></a>
+                    <a id="date" href="date.html"><div id="date">Data</div></a>
+                    <a id="animal" href="animal.html"><div id="animal">Animal</div></a>
+                    <a id="name" href="nome.html"><div id="name">Nome</div></a>
+                    <a id="hour" href="hour.html"><div id="hour">Hora</div></a>
+                    <a id=power href="power.html"><div id="power">Super-poder</div></a>
+                </div>
+                <div id="word">Randomers</div>
+            </div>
+            <div id="second">  
+                <p id="pal">Este é seu novo site de aleatorios</p>
+                <p id="aki">Aqui você encontra:</p>
+                <div id="menu2">
+                    <div id="dpais">
+                        <p>País</p>
+                        <p>Nessa opção, você obtem quantos nomes quiser de países de todo o mundo em um simples clique</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="dstate">
+                    <p>Estado</p>
+                    <p>Nessa opção você obtem milhões de possibilidades, podendo ter como resposta um estado de qualquer país ao redor do mundo</p>
+                    <b>Isso é Randomers</b> 
+                    </div>
+                    <div id="dletra">
+                        <p>Letra</p>
+                        <p>Por ser Ramers aqui você tem muito mais que apenas 26 possibilidades, pois agora vc pode fazer combinações</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="dnum">
+                        <p>Número</p>
+                        <p>Obtenha um número aleatório onde o início da escala e seu fim é vc quem decide</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="ddate">
+                        <p>Data</p>
+                        <p>Viage no tempo com essa nova opção, aqui você obtem uma data totalmente aleatória para se divertir</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="danimal">
+                        <p>Animal</p>
+                        <p>Anfíbios, répteis, mamíferos e até mesmo dinossauros você obtém com a novidade da Randomers, e omelhor, é de graça</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="dname">
+                        <p>Nome</p>
+                        <p>Do nome do seu cachorro ao nome da criança, tudo você obtém com um clique aqui na Randomers</p>
+                        <b>Isso também é Randomers</b>
+                    </div>
+                    <div id="dhour">
+                        <p>Hora</p>
+                        <p>Agora que você já pode obter sua data aleatória, navegue um pouco também na hora do ocorrido com nossa tecnologia</p>
+                        <b>Isso é Randomers</b>
+                    </div>
+                    <div id="dpower">
+                        <p>Super-poder</p>
+                        <p>Uma pequena ajuda a sua imaginação.Com nossa ferramenta para vc descobre qual será o poder de seu novo super-herói ou super-heroína, já que o nome vc já tem</p>
+                        <b>Vc já sabe ñ é msm?</b>
+                    </div>
+                </div>
+            </div>   
+    </div>
+    <script>
+        function carreg(){
+            document.getElementById('container').style.display='block'
+            document.getElementById('desenho').style.display='none'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=style.css rel="stylesheet" type="text/css">
+    <title>Random country</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color:#ffff71
+        }
+        #country{
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:600px;
+            height:100px;
+            border:5px solid #000;
+            transform:translate(-40%,-40%);
+            text-align:center;
+            font-size:55px;
+            font-weight: bold;
+        }
+        #capcont{
+            width:350px;
+            height:50px;
+            border:1px solid #000;
+            position:relative;
+            top:50%;
+            left:20%;
+            border:5px solid #000;
+            transform:translate(10%,80%);
+            text-align:center;
+            font-size:20px;
+            font-weight: bold;
+        }
+        #cap{
+            width:auto;
+            height:30px;
+            font-size:40px;
+        }
+        #conticont{
+            width:350px;
+            height:50px;
+            border:1px solid #000;
+            position:relative;
+            top:42%;
+            left:40%;
+            border:5px solid #000;
+            transform:translate(60%,80%);
+            text-align:center;
+            font-size:20px;
+            font-weight: bold;
+        }
+        #conti{
+            width:auto;
+            height:30px;
+            font-size:40px;
+        }
+        @media screen and (max-width:500px){
+            #country{
+            position:absolute;
+            top:50%;
+            left:40%;
+            width:450px;
+            height:100px;
+            border:5px solid #000;
+            transform:translate(-40%,-40%);
+            text-align:center;
+            font-size:40px;
+            font-weight: bold;
+            }
+            #capcont{
+                width:350px;
+                height:50px;
+                border:1px solid #000;
+                position:relative;
+                top:50%;
+                left:10%;
+                border:5px solid #000;
+                transform:translate(10%,80%);
+                text-align:center;
+                font-size:20px;
+                font-weight: bold;
+            }
+            #cap{
+                width:50px;
+                height:30px;
+                font-size:30px;
+            }
+                #conticont{
+                width:250px;
+                height:50px;
+                position:relative;
+                top:62%;
+                left:10%;
+                transform:translate(30%,20%);
+            }
+            #conti{
+                width:50px;
+                height:30px;
+                font-size:40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="menu">
+            <a id=hom href="index.html"><div id="hom">Home</div></a>
+            <a id="estado" href="state.html"><div id="estado">Estado</div></a>
+            <a id="letra" href="let.html"><div id="letra">Letra</div></a>
+            <a id="num" href="num.html"><div id="num">Numero</div></a>
+            <a id="date" href="date.html"><div id="date">Data</div></a>
+            <a id="animal" href="animal.html"><div id="animal">Animal</div></a>
+            <a id="name" href="nome.html"><div id="name">Nome</div></a>
+            <a id="hour" href="hour.html"><div id="hour">Hora</div></a>
+            <a id=power href="power.html"><div id="power">Super-poder</div></a>
+        </div>
+        <div id="country"></div>
+        <div id="capcont">
+            <div id="cap"></div>      
+            <p style="top:5px;">Capital</p>
+        </div>
+        <div id="conticont">
+            <div id="conti"></div>      
+            <p style="top:5px;">Continente</p>
+        </div>
+        </div>  
+    <script src="pais.js"></script>
+</body>
+</html>

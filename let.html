@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=style.css rel="stylesheet" type="text/css">
+    <title>Random Letter</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #qntd{
+            position:absolute;
+            top:70%;
+            left:50%;
+            width:500px;
+            height:70px;
+            border:5px solid #000;
+            transform:translate(-50%,-50%);
+            text-align:center;
+            font-size:60px;
+            font-weight: bold;
+            background-color: #ffff70;
+        }
+        #p{
+            position:absolute;
+            top:75%;
+            left:50%;
+            width:500px;
+            height:30px;
+            border:2px solid #000;
+            transform:translate(-50%,-50%);
+            text-align:center;
+            font-size:30px;
+            font-weight: bold;
+            background-color: #ffff70;
+        }
+        #word{
+            width:650px;
+        }
+        #aply{
+            position:absolute;
+            top:60%;
+            left:50%;
+            width:250px;
+            height:35px;
+            border:3px solid #000;
+            transform:translate(-50%,-50%);
+            text-align:center;
+            font-size:30px;
+            font-weight: bold;
+            background-color: #ffff70;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="menu">
+            <a id=pais href="pais.html"><div id="pais">País</div></a>
+            <a id="estado" href="state.html"><div id="estado">Estado</div></a>
+            <a id="letra" href="index.html"><div id="letra">Home</div></a>
+            <a id="num" href="num.html"><div id="num">Numero</div></a>
+            <a id="date" href="date.html"><div id="date">Data</div></a>
+            <a id="animal" href="animal.html"><div id="animal">Animal</div></a>
+            <a id="name" href="nome.html"><div id="name">Nome</div></a>
+            <a id="hour" href="hour.html"><div id="hour">Hora</div></a>
+            <a id=power href="power.html"><div id="power">Super-poder</div></a>
+        </div>
+        <div id="word">R</div>
+        <p id="p">Quantidade de Letras</p>
+        <input id="qntd" type=number min="1" max=12 step=1 placeholder="1"/>
+        <button id="aply" onclick="create()">Aplicar</button>
+    </div>
+    <script src="let.js"></script>
+</body>
+</html>

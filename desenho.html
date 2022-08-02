@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw</title>
+    <style>
+        body{background-color: #ffff70;}
+        #svg{
+            position:absolute;
+            top:50%;
+            left:50%;
+            height:700px;
+            width:900px;
+            transform:translate(-50%,-50%);
+            stroke:#000;
+            stroke-width:3px;
+            fill:transparent;
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3500;
+            animation:draw 5s linear infinite;
+        }
+        @keyframes draw{
+            to{stroke-dashoffset: 0;}
+        }
+    </style>
+</head>
+<body>
+    <svg id="svg" >
+        <polyline points="300,500 300,100 550,100 550,290 350,290 550,500">
+    </svg>
+</body>
+</html>

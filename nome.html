@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=style.css rel="stylesheet" type="text/css">
+    <title>Random Name</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #word{
+            width:650px;
+        }
+        #aply{
+            position:absolute;
+            top:60%;
+            left:50%;
+            width:250px;
+            height:35px;
+            border:3px solid #000;
+            transform:translate(-50%,-50%);
+            text-align:center;
+            font-size:30px;
+            font-weight: bold;
+            background-color: #ffff70;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="menu">
+            <a id=pais href="pais.html"><div id="pais">País</div></a>
+            <a id="estado" href="state.html"><div id="estado">Estado</div></a>
+            <a id="letra" href="let.html"><div id="letra">Letra</div></a>
+            <a id="num" href="num.html"><div id="num">Número</div></a>
+            <a id="date" href="date.html"><div id="date">Data</div></a>
+            <a id="animal" href="animal.html"><div id="animal">Animal</div></a>
+            <a id="name" href="index.html"><div id="name">Home</div></a>
+            <a id="hour" href="hour.html"><div id="hour">Hora</div></a>
+            <a id=power href="power.html"><div id="power">Super-poder</div></a>
+        </div>
+        <div id="word">Randomers</div> 
+        <button id="aply" onclick="create()">Novo Nome</button>
+    </div>
+    <script>
+        var nomes=['Arthur','Pedro','João','Tiago','André','Bartolomeu','Alice','Maria','Maria Alice',
+                'Maria Cecília','Antônia','Antônio','José','Christian','Christian José','Mateus','Lara',
+                'Eduardo','Paulo','Henrique','Paulo Henrique','Paulo André','Paulo Ricardo','Pedro','Pedro Paulo',
+                'João Pedro','Cláudio','Cláudia','Daise','Rose','Miguel','Arthur','Gael','Heitor',
+                'Theo','Davi','David','Gabriel','Helena','Laura','Valentina','Heloísa','Sophia','Bernardo',
+                'Isabela','Manuela','Lorenzo','Júlia','Maria Luiza','Luiza','Lorena','Lívia','Geovana',
+                'Enzo','Lucas','Benjamin','Nicolas','Maria Eduarda','Beatriz','Eloá','Isadora','Mariana',
+                'Guilherme','Rafael','Joaquim','Samuel','Enzo Gabriel','João Miguel','Gustavo','Murilo',
+                'Lucca','Pietro','Felipe','Isaac','Daniel','Anthony','Leonardo','Ana Júlia','Maria Júlia',
+                'Ana luiza','Ana Clara','Melissa','Yasmin','Isabelly','Esther','Sara','Antonella','Cauã',
+                'Caleb','Nicole','Maitê','Lunna','Caio','Emanuel','Vinícius','Marcos','Camila','Noah','Rebeca',
+                'Olívia','Emilly','Maria Valentina','Milena','Maria Helena','Bianca','Larissa','Mirela','Thomas',
+                'Nathan','Hnery','Laís','Luan','Bruno','Rodrigo','Angelina','Carol','Carolina','Kauê','Amanda',
+                'Tomás','Carlos Eduardo','Heloise'
+            ]       
+        function create(){
+            var r=Math.floor(Math.random()*123)
+            document.getElementById('word').innerHTML=nomes[r]
+        }
+    </script>
+</body>
+</html>

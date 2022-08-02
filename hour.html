@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=style.css rel="stylesheet" type="text/css">
+    <title>Random Name</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #word{
+            width:650px;
+        }
+        #aply{
+            position:absolute;
+            top:60%;
+            left:50%;
+            width:250px;
+            height:35px;
+            border:3px solid #000;
+            transform:translate(-50%,-50%);
+            text-align:center;
+            font-size:30px;
+            font-weight: bold;
+            background-color: #ffff70;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="menu">
+            <a id=pais href="pais.html"><div id="pais">País</div></a>
+            <a id="estado" href="state.html"><div id="estado">Estado</div></a>
+            <a id="letra" href="let.html"><div id="letra">Letra</div></a>
+            <a id="num" href="num.html"><div id="num">Número</div></a>
+            <a id="date" href="date.html"><div id="date">Data</div></a>
+            <a id="animal" href="animal.html"><div id="animal">Animal</div></a>
+            <a id="name" href="nome.html"><div id="name">Nome</div></a>
+            <a id="hour" href="index.html"><div id="hour">Home</div></a>
+            <a id=power href="power.html"><div id="power">Super-poder</div></a>
+        </div>
+        <div id="word">Randomers</div> 
+        <button id="aply" onclick="create()">Nova Hora</button>
+    </div>
+    <script> 
+        var  dt=new Date()
+        var h=dt.getHours()
+        var m=dt.getMinutes()
+        var s=dt.getSeconds()
+        document.getElementById('word').innerHTML=h+':'+m+':'+s
+        function create(){
+            var h=Math.floor(Math.random()*23)+1
+            var m=Math.floor(Math.random()*58)+1
+            var s=Math.floor(Math.random()*58)+1
+            if(h<10){
+                h='0'+h
+            }
+            if(m<10){
+                m='0'+m
+            }
+            if(s<10){
+                s='0'+s
+            }
+            document.getElementById('word').innerHTML=h+':'+m+':'+s
+        }
+    </script>
+</body>
+</html>
